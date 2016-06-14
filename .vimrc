@@ -91,24 +91,32 @@ set fencs=utf-8,cp1251,koi8-r,cp866
 syntax on " включить подсветку синтаксиса
 
 "" Применять типы файлов
-filetype off
 
 "ПЛАГИНЫ!!!
 
-set rtp+=~/.vim/bundle/Vundle.vim
+"filetype off
+"set rtp+=~/.vim/bundle/Vundle.vim
+"call vundle#begin()
+"Plugin 'VundleVim/Vundle.vim'
+"Plugin 'scrooloose/nerdtree'
+"Plugin 'vim-airline/vim-airline'
+"Plugin 'vim-airline/vim-airline-themes'
+"Plugin 'jlanzarotta/bufexplorer'
+"Plugin 'flazz/vim-colorschemes'
+"Plugin 'kien/ctrlp.vim'
+"Plugin 'bling/vim-bufferline'
+"call vundle#end()
 
-call vundle#begin()
+call plug#begin('~/.vim/bundle')
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
+Plug 'jlanzarotta/bufexplorer'
+Plug 'flazz/vim-colorschemes'
+Plug 'kien/ctrlp.vim'
+Plug 'bling/vim-bufferline'
+call plug#end()
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'jlanzarotta/bufexplorer'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'kien/ctrlp.vim'
-Plugin 'bling/vim-bufferline'
-
-call vundle#end()
 
 filetype plugin on
 filetype indent on
