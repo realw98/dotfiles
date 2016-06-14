@@ -8,7 +8,7 @@ mkdir -p ~/.vim/autoload/
 cd ~/.vim/autoload/
 wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-ln -s ~/.Xresources ~/dotfiles/.Xresources
-ln -s ~/.zshrc ~/dotfiles/.zshrc
-ln -s ~/.vimrc ~/dotfiles/.vimrc
+ln -s ~/dotfiles/.Xresources ~/.Xresources
+ln -s ~/dotfiles/.zshrc ~/.zshrc 
+ln -s ~/dotfiles/.vimrc ~/.vimrc
 
