@@ -64,6 +64,7 @@ export ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets cursor root)
 
 export LANG=ru_RU.UTF-8
 export EDITOR=vim
+export VISUAL=vim
 export PAGER=less
 
 alias vi='vim'
