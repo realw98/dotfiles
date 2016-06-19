@@ -106,13 +106,13 @@ URxvt*foreground:                       White
 ! URxvt*colorIT:                        color
 
 ! Use the specified colour to disp1ay underlined characters when the foreground colour is the default.
-URxvt*colorUL:                          yellow
+! URxvt*colorUL:                          yellow
 
 ! Use the specified colour as the background for reverse video characters.
 ! URxvt*colorRV:                        color
 
 ! If set, use the specified colour as the colour for the underline itself. If unset, use the foreground colour
-URxvt*underlineColor:                   yellow
+!URxvt*underlineColor:                   yellow
 
 ! Use the specified colour for the scrollbar [default #B2B2B2]
 ! URxvt*scrollColor:                    color
@@ -130,13 +130,13 @@ URxvt*underlineColor:                   yellow
 !URxvt*cursorUnderline:                  false
 
 ! True: blink the cursor. False: do not blink the cursor [default];
-!URxvt*cursorBlink:                      true
+URxvt*cursorBlink:                      false
 
 ! Use the specified colour for the cursor.  The default is to use the foreground colour
 URxvt*cursorColor:                      Green
 
 ! Use the specified colour for the colour of the cursor text.  For this to take effect, cursorColor must also be specified.  The default is to use the background colour
-!URxvt*cursorColor2:                     White
+URxvt*cursorColor2:                     Blue
 
 ! True: blank the pointer when a key is pressed or after a set number of seconds of inactivity. False: the pointer is always visible [default]
 !URxvt*pointerBlank:                     true
@@ -201,7 +201,7 @@ URxvt*hold:                             false
 ! URxvt*externalBorder:                 number
 
 ! Internal border of number pixels. This resource is limited to 100
-URxvt*internalBorder:					1
+URxvt*internalBorder:					5
 
 ! The colour of the border around the text area and between the scrollbar and the text.
 ! URxvt*borderColor:                    color
@@ -247,7 +247,7 @@ URxvt*perl-ext-common:
 URxvt*perl-ext:
 
 ! Specifies the program to be started with a URL argument. Used by the "selection-popup" and "matcher" perl extensions
-! URxvt*url-launcher:                   string
+URxvt*url-launcher:                   /usr/bin/xdg-open
 
 ! name of inputMethod to use
 ! URxvt*inputMethod:                    name
