@@ -62,13 +62,8 @@ source $ZSH/oh-my-zsh.sh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets cursor root)
 
-export LANG=ru_RU.UTF-8
-export EDITOR=vim
-export VISUAL=vim
-export PAGER=less
-export MAKEOPTS="-j5"
-export CFLAGS="-march=native"
-export CPPFLAGS=$CFLAGS
+
+source ~/dotfiles/.env.sh
 
 alias vi='vim'
 alias tmx='tmux attach || tmux'

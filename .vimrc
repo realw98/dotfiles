@@ -140,10 +140,10 @@ set tabstop=4 " ширина табуляции
 set softtabstop=4 " ширина 'мягкого' таба
 set autoindent " ai - включить автоотступы (копируется отступ предыдущей строки)
 set cindent " ci - отступы в стиле С
-set expandtab " преобразовать табуляцию в пробелы
+"set expandtab " преобразовать табуляцию в пробелы
 set smartindent " Умные отступы (например, автоотступ после {)
 " Для указанных типов файлов отключает замену табов пробелами и меняет ширину отступа
-au FileType crontab,fstab,make set noexpandtab tabstop=8 shiftwidth=8
+au FileType crontab,fstab,make set noexpandtab tabstop=4 shiftwidth=4
 
 
 "НАСТРОЙКИ ВНЕШНЕГО ВИДА
