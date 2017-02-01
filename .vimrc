@@ -49,7 +49,9 @@ let c_syntax_for_h="" " необходимо установить для тог�
 set pastetoggle=
 "подсвечивает все слова, которые совпадают со словом под курсором.
 set noshowmode
+if has('gui')
 set cursorline
+endif
 
 
 "НАСТРОЙКИ ПЕРЕМЕННЫХ ОКРУЖЕНИЯ
@@ -77,14 +79,16 @@ set tags=tags\ $VIMRUNTIME/systags " искать теги в текущй ди�
 
 "НАСТРОЙКИ РАБОТЫ С ФАЙЛАМИ
 "Кодировка редактора (терминала) по умолчанию (при создании все файлы приводятся к этой кодировке)
+
 if has('win32')
-   set encoding=cp1251
-else
-   set encoding=utf-8
-   set termencoding=utf-8
-endif
+	set encoding=cp1251
 " формат файла по умолчанию (влияет на окончания строк) - будет перебираться в указанном порядке
-set fileformat=unix
+	set fileformat=dos
+else
+	set encoding=utf-8
+	set termencoding=utf-8
+	set fileformat=unix
+endif
 " варианты кодировки файла по умолчанию (все файлы по умолчанию сохраняются в этой кодировке)
 set fencs=utf-8,cp1251,koi8-r,cp866
 "" Перед сохранением .vimrc обновлять дату последнего изменения
@@ -106,24 +110,31 @@ syntax on " включить подсветку синтаксиса
 "Plugin 'kien/ctrlp.vim'
 "Plugin 'bling/vim-bufferline'
 "call vundle#end()
+if has('win32')
+else
 
-call plug#begin('~/.vim/bundle')
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'vim-airline/vim-airline'
-"Plug 'vim-airline/vim-airline-themes'
-Plug 'jlanzarotta/bufexplorer'
-Plug 'flazz/vim-colorschemes'
-Plug 'kien/ctrlp.vim'
-Plug 'bling/vim-bufferline'
-call plug#end()
+	call plug#begin('~/.vim/bundle')
+	Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+	Plug 'vim-airline/vim-airline'
+	"Plug 'vim-airline/vim-airline-themes'
+	Plug 'jlanzarotta/bufexplorer'
+	Plug 'flazz/vim-colorschemes'
+	Plug 'kien/ctrlp.vim'
+	Plug 'bling/vim-bufferline'
+	call plug#end()
 
 
-filetype plugin on
-filetype indent on
+	filetype plugin on
+	filetype indent on
+
+	let g:bufferline_echo = 0
+	"let g:airline_theme='badwolf'
+
+endif
 
 colorscheme desert
-let g:bufferline_echo = 0
-"let g:airline_theme='badwolf'
+
+
 
 
 "Удалять пустые пробелы на концах строк при открытии файла
