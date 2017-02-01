@@ -22,7 +22,6 @@ autocmd! bufwritepost $MYVIMRC source $MYVIMRC
 " encoding - кодировка терминала; TYPE - тип файла, затем коды символа под курсором;
 " позиция курсора (строка, символ в строке); процент прочитанного в файле;
 " кол-во строк в файле;
-"set statusline=%F%m%r%h%w\ [FF,FE,TE=%{&fileformat},%{&fileencoding},%{&encoding}\]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
 "Изменяет шрифт строки статуса (делает его не жирным)
 hi StatusLine gui=reverse cterm=reverse
 set laststatus=2 " всегда показывать строку состояния
@@ -48,10 +47,11 @@ let c_syntax_for_h="" " необходимо установить для тог�
 " При вставке фрагмента сохраняет отступ
 set pastetoggle=
 "подсвечивает все слова, которые совпадают со словом под курсором.
-set noshowmode
 if has('gui')
 set cursorline
 endif
+set iminsert=0
+set imsearch=-1
 
 
 "НАСТРОЙКИ ПЕРЕМЕННЫХ ОКРУЖЕНИЯ
@@ -110,29 +110,50 @@ syntax on " включить подсветку синтаксиса
 "Plugin 'kien/ctrlp.vim'
 "Plugin 'bling/vim-bufferline'
 "call vundle#end()
+
+"set statusline=%F%m%r%h%w\ [FF,FE,TE=%{&fileformat},%{&fileencoding},%{&encoding}\]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
+"
 if has('win32')
+
+set noshowmode
+call plug#begin('~/vimfiles/bundle')
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'jlanzarotta/bufexplorer'
+Plug 'flazz/vim-colorschemes'
+Plug 'kien/ctrlp.vim'
+Plug 'bling/vim-bufferline'
+call plug#end()
+
+filetype plugin on
+filetype indent on
+let g:bufferline_echo = 0
+
 else
 
-	call plug#begin('~/.vim/bundle')
-	Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-	Plug 'vim-airline/vim-airline'
-	"Plug 'vim-airline/vim-airline-themes'
-	Plug 'jlanzarotta/bufexplorer'
-	Plug 'flazz/vim-colorschemes'
-	Plug 'kien/ctrlp.vim'
-	Plug 'bling/vim-bufferline'
-	call plug#end()
+set noshowmode
+call plug#begin('~/.vim/bundle')
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'vim-airline/vim-airline'
+"plug 'vim-airline/vim-airline-themes'
+Plug 'jlanzarotta/bufexplorer'
+Plug 'flazz/vim-colorschemes'
+Plug 'kien/ctrlp.vim'
+Plug 'bling/vim-bufferline'
+call plug#end()
 
-
-	filetype plugin on
-	filetype indent on
-
-	let g:bufferline_echo = 0
-	"let g:airline_theme='badwolf'
+filetype plugin on
+filetype indent on
+let g:bufferline_echo = 0
 
 endif
 
-colorscheme desert
+if has('gui')
+	colorscheme darkblue
+else
+	colorscheme evening
+endif
 
 
 
