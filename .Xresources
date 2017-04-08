@@ -73,7 +73,7 @@ URxvt*fading:                           30
 ! URxvt*fadeColor:                        Green
 
 ! True: inhibit writing record into the system log file utmp;  False: write record into the system log file utmp [default]
-URxvt*utmpInhibit:                      false
+URxvt*utmpInhibit:                      true
 
 ! True: set the urgency hint for the wm on receipt of a bell character.  False: do not set the urgency hint [default] urxvt resets the urgency hint on every focus change.
 URxvt*urgentOnBell:                     false
@@ -164,10 +164,10 @@ URxvt*cursorColor2:                     Blue
 
 
 ! Select the fonts to be used. This is a comma separated list of font names that are checked in order when trying to find glyphs for characters
-URxvt*font:                             xft:terminus:pixelsize:10
-URxvt*boldFont:                         xft:terminus:bold:pixelsize:10
-URxvt*italicFont:                       xft:Bitstream Vera Sans Mono:italic:autohint=true:pixelsize=10
-URxvt*boldItalicFont:                   xft:Bitstream Vera Sans Mono:bold:italic:autohint=true:pixelsize=10
+URxvt*font:                             xft:Roboto Mono:autohint=true:pixelsize=13
+URxvt*boldFont:                         xft:Roboto Mono:autohint=true:pixelsize=13
+!URxvt*italicFont:                       xft:Bitstream Vera Sans Mono:italic:autohint=true:pixelsize=10
+!URxvt*boldItalicFont:                   xft:Bitstream Vera Sans Mono:bold:italic:autohint=true:pixelsize=10
 
 
 
@@ -319,3 +319,5 @@ URxvt*url-launcher:                   /usr/bin/xdg-open
 ! URxvt*remote-clipboard.fetch:         string
 ! URxvt*remote-clipboard.store:         string
 
+
+URxvt.iso14755_52: false
