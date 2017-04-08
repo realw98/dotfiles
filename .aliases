@@ -1,0 +1,4 @@
+alias vi='vim'
+alias tmx='tmux attach || tmux'
+
+
