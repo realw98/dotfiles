@@ -50,19 +50,26 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 #
-plugins=(colored-man-pages zsh-history-substring-search tmux gulp bower npm zsh-navigation-tools web-search)
+plugins=(colored-man-pages zsh-history-substring-search tmux bower npm zsh-navigation-tools web-search)
 
 # User configuration
+#
 
-source ~/dotfiles/.env.sh
-[ -s ~/.env.local.sh ] && source ~/.env.local.sh
+inc_file() {
+	[ -s $1 ] && source $1
+}
+
+inc_file ~/dotfiles/.env.sh
+inc_file ~/.env.local.sh
 
 source $ZSH/oh-my-zsh.sh
 
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+inc_file /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+inc_file /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highligting.zsh
 export ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets cursor root)
 
-source ~/dotfiles/.aliases
+inc_file ~/dotfiles/.aliases
+
 export NVM_DIR="/usr/local/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
