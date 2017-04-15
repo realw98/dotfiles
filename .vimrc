@@ -228,6 +228,9 @@ imap <F3> <Esc>:BufExplorer<cr>i
 "F4 - выбор нового файла
 map <F4> <Esc>:browse tabnew<CR>
 imap <F4> <Esc>:browse tabnew<CR>
+"C-t - новый таб
+map <C-t> <Esc>:browse tabnew<CR>
+imap <C-t> <Esc>:browse tabnew<CR>
 
 "F5 - предыдущий таб
 map <F5> :tabprev<cr>
@@ -235,13 +238,11 @@ imap <F5> <esc>:tabprev<cr>i
 map <C-Left> :tabprev<cr>
 imap <C-Left> <esc>:tabprev<cr>i
 
-
 "F6 - следующий таб
 map <F6> :tabnext<cr>
 imap <F6> <esc>:tabnext<cr>i
 map <C-Right> :tabnext<cr>
 imap <C-Right> <esc>:tabnext<cr>i
-
 
 "F10 - меню для выхода
 set wildmenu
@@ -250,6 +251,7 @@ menu Exit.quit     :quit<CR>
 menu Exit.quit!    :quit!<CR>
 menu Exit.save     :exit<CR>
 map <F10> :emenu Exit.<Tab>
+imap <F10> :emenu Exit.<Tab>
 
 " C-l - включить-выключить нумерацию строк
 map <C-l> :set<Space>nu!<CR>
@@ -266,7 +268,7 @@ imap <C-p> <Esc>:bp<cr>i
 map <C-k> :bdelete<cr>
 imap <C-k> <Esc>:bdelete<cr>i
 
-map <C-%> :split<cr>
+map <C-5> :split<cr>
 
 "C-d - дублирование текущей строки
 imap <C-d> <esc>yypi
@@ -278,15 +280,14 @@ vnoremap <C-x> "+x
 " CTRL-C - копировать
 vnoremap <C-c> "+y
 " CTRL-V вставить под курсором
-map <C-v>      "+gP
+vnoremap <C-v>      "+gP
 "" Отменить-вернуть через Ctrl
 " отмена действия
-"noremap <C-Z> u
-"inoremap <C-Z> <C-O>u
+noremap <C-Z> u
+inoremap <C-Z> <C-O>u
 " вернуть отменённое назад
-"noremap <C-Y> <C-R>
-"inoremap <C-Y> <C-O><C-R>
-
+noremap <C-Y> <C-R>
+inoremap <C-Y> <C-O><C-R>
 
 
 " плагин NERDTree - дерево каталогов)

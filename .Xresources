@@ -94,7 +94,7 @@ URxvt*mouseWheelScrollPage:             false
 ! URxvt*insecure:                       boolean
 
 ! Use the specified colour as the windows background colour [default White]
-URxvt*background:                       Black
+URxvt*background:                       #061116
 
 !  Use the specified colour as the windows foreground colour [default Black]
 URxvt*foreground:                       White
@@ -164,8 +164,8 @@ URxvt*cursorColor2:                     Blue
 
 
 ! Select the fonts to be used. This is a comma separated list of font names that are checked in order when trying to find glyphs for characters
-URxvt*font:                             xft:Roboto Mono:autohint=true:pixelsize=13
-URxvt*boldFont:                         xft:Roboto Mono:autohint=true:pixelsize=13
+URxvt*font:                             xft:D2Coding for Powerline:autohint=false:pixelsize=17
+URxvt*boldFont:                         xft:D2Coding for Powerline:bold:autohint=true:pixelsize=17
 !URxvt*italicFont:                       xft:Bitstream Vera Sans Mono:italic:autohint=true:pixelsize=10
 !URxvt*boldItalicFont:                   xft:Bitstream Vera Sans Mono:bold:italic:autohint=true:pixelsize=10
 
