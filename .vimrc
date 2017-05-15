@@ -113,10 +113,15 @@ syntax on " включить подсветку синтаксиса
 
 "set statusline=%F%m%r%h%w\ [FF,FE,TE=%{&fileformat},%{&fileencoding},%{&encoding}\]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
 "
-if has('win32')
 
 set noshowmode
-call plug#begin('~/vimfiles/bundle')
+
+if has('win32')
+	call plug#begin('~/vimfiles/bundle')
+else 
+	call plug#begin('~/.vim/bundle')
+endif
+
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -124,30 +129,21 @@ Plug 'jlanzarotta/bufexplorer'
 Plug 'flazz/vim-colorschemes'
 Plug 'kien/ctrlp.vim'
 Plug 'bling/vim-bufferline'
-call plug#end()
+Plug 'leafgarland/typescript-vim'
+Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
-filetype plugin on
-filetype indent on
-let g:bufferline_echo = 0
-
-else
-
-set noshowmode
-call plug#begin('~/.vim/bundle')
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'vim-airline/vim-airline'
-"plug 'vim-airline/vim-airline-themes'
-Plug 'jlanzarotta/bufexplorer'
-Plug 'flazz/vim-colorschemes'
-Plug 'kien/ctrlp.vim'
-Plug 'bling/vim-bufferline'
-call plug#end()
-
-filetype plugin on
-filetype indent on
-let g:bufferline_echo = 0
-
+if has('unix')
+	Plug 'ryanoasis/vim-devicons'
 endif
+
+call plug#end()
+
+filetype plugin on
+filetype indent on
+let g:bufferline_echo = 0
+let g:airline_powerline_fonts = 1
+let g:NERDTreeLimitedSyntax = 1
 
 if has('gui')
 	colorscheme darkblue
@@ -229,9 +225,13 @@ imap <F3> <Esc>:BufExplorer<cr>i
 map <F4> <Esc>:browse tabnew<CR>
 imap <F4> <Esc>:browse tabnew<CR>
 "C-t - новый таб
-map <C-t> <Esc>:browse tabnew<CR>
-imap <C-t> <Esc>:browse tabnew<CR>
+map <C-t> <Esc>:tabnew<CR>
+imap <C-t> <Esc>:tabnew<CR>
 
+"C-F4 - закрыть таб
+map <C-F4> <Esc>:browse tabnew<CR>
+imap <C-F4> <Esc>:browse tabnew<CR>
+"
 "F5 - предыдущий таб
 map <F5> :tabprev<cr>
 imap <F5> <esc>:tabprev<cr>i
@@ -259,14 +259,14 @@ imap <C-l> <Esc>:set<Space>nu!<CR>i
 
 "Работа с буферами
 "C-n предыдущий буфер
-map <C-n> :bn<cr>
-imap <C-n> <Esc>:bn<cr>i
+map <C-Up> :bn<cr>
+imap <C-Up> <Esc>:bn<cr>i
 "C-p след буфер
-map <C-p> :bp<cr>
-imap <C-p> <Esc>:bp<cr>i
+map <C-Down> :bp<cr>
+imap <C-Down> <Esc>:bp<cr>i
 "C-k закрыть буфер
-map <C-k> :bdelete<cr>
-imap <C-k> <Esc>:bdelete<cr>i
+map <C-k> :Sayonara<cr>
+imap <C-k> <Esc>:Sayonara<cr>i
 
 map <C-5> :split<cr>
 
