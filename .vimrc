@@ -134,7 +134,7 @@ Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 if has('unix')
-	Plug 'ryanoasis/vim-devicons'
+"	Plug 'ryanoasis/vim-devicons'
 endif
 
 call plug#end()
@@ -229,8 +229,8 @@ map <C-t> <Esc>:tabnew<CR>
 imap <C-t> <Esc>:tabnew<CR>
 
 "C-F4 - закрыть таб
-map <C-F4> <Esc>:browse tabnew<CR>
-imap <C-F4> <Esc>:browse tabnew<CR>
+map <C-F4> <Esc>:tabclose<CR>
+imap <C-F4> <Esc>:tabclose<CR>
 "
 "F5 - предыдущий таб
 map <F5> :tabprev<cr>
@@ -273,7 +273,7 @@ map <C-5> :split<cr>
 "C-d - дублирование текущей строки
 imap <C-d> <esc>yypi
 " Ctrl-пробел для автодополнения
-"inoremap <C-space> <C-x><C-o>
+inoremap <C-space> <C-x><C-o>
 "" Вырезать-копировать-вставить через Ctrl
 " CTRL-X - вырезать
 vnoremap <C-x> "+x
