@@ -251,17 +251,17 @@ menu Exit.quit     :quit<CR>
 menu Exit.quit!    :quit!<CR>
 menu Exit.save     :exit<CR>
 map <F10> :emenu Exit.<Tab>
-imap <F10> :emenu Exit.<Tab>
+imap <F10> <esc>:emenu Exit.<Tab>
 
 " C-l - включить-выключить нумерацию строк
 map <C-l> :set<Space>nu!<CR>
 imap <C-l> <Esc>:set<Space>nu!<CR>i
 
 "Работа с буферами
-"C-n предыдущий буфер
+"C-up предыдущий буфер
 map <C-Up> :bn<cr>
 imap <C-Up> <Esc>:bn<cr>i
-"C-p след буфер
+"C-down след буфер
 map <C-Down> :bp<cr>
 imap <C-Down> <Esc>:bp<cr>i
 "C-k закрыть буфер
