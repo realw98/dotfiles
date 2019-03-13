@@ -48,7 +48,7 @@ let c_syntax_for_h="" " необходимо установить для тог�
 set pastetoggle=
 "подсвечивает все слова, которые совпадают со словом под курсором.
 if has('gui')
-set cursorline
+	set cursorline
 endif
 set iminsert=0
 set imsearch=-1
@@ -82,7 +82,7 @@ set tags=tags\ $VIMRUNTIME/systags " искать теги в текущй ди�
 
 if has('win32')
 	set encoding=cp1251
-" формат файла по умолчанию (влияет на окончания строк) - будет перебираться в указанном порядке
+	" формат файла по умолчанию (влияет на окончания строк) - будет перебираться в указанном порядке
 	set fileformat=dos
 else
 	set encoding=utf-8
@@ -118,7 +118,7 @@ set noshowmode
 
 if has('win32')
 	call plug#begin('~/vimfiles/bundle')
-else 
+else
 	call plug#begin('~/.vim/bundle')
 endif
 
@@ -133,9 +133,9 @@ Plug 'leafgarland/typescript-vim'
 Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
-if has('unix')
+"if has('unix')
 "	Plug 'ryanoasis/vim-devicons'
-endif
+"endif
 
 call plug#end()
 
@@ -148,9 +148,12 @@ let g:NERDTreeLimitedSyntax = 1
 if has('gui')
 	colorscheme darkblue
 else
-	colorscheme evening
+	if has('win32')
+		colorscheme default
+	else
+		colorscheme evening
+	endif
 endif
-
 
 
 
@@ -178,17 +181,17 @@ au FileType crontab,fstab,make set noexpandtab tabstop=4 shiftwidth=4
 " Установка шрифта (для Windows и Linux)
 " настройка внешнего вида для GUI
 if has('gui')
-    " отключаем графические табы (останутся текстовые,
-    " занимают меньше места на экране)
-    set guioptions-=e
-    " отключить показ иконок в окне GUI (файл, сохранить и т.д.)
-    set guioptions-=T
+	" отключаем графические табы (останутся текстовые,
+	" занимают меньше места на экране)
+	set guioptions-=e
+	" отключить показ иконок в окне GUI (файл, сохранить и т.д.)
+	set guioptions-=T
 
-    if has('win32')
-        set guifont=Lucida_Console:h10:cRUSSIAN::
-    else
-        set guifont=Terminus\ 10
-    endif
+	if has('win32')
+		set guifont=Lucida_Console:h10:cRUSSIAN::
+	else
+		set guifont=Terminus\ 10
+	endif
 endif
 
 
@@ -298,47 +301,47 @@ imap <F12> <esc>:NERDTreeToggle<cr>i
 
 
 "" Переключение кодировок файла
-   " Меню Encoding -->
-        " Выбор кодировки, в которой читать файл -->
-            set wildmenu
-            set wcm=<Tab>
-            menu Encoding.Read.utf-8<Tab> :e ++enc=utf8 <CR>
-            menu Encoding.Read.windows-1251<Tab> :e ++enc=cp1251<CR>
-            menu Encoding.Read.koi8-r<Tab> :e ++enc=koi8-r<CR>
-            menu Encoding.Read.cp866<Tab> :e ++enc=cp866<CR>
-            map <F7> :emenu Encoding.Read.<TAB>
-        " Выбор кодировки, в которой читать файл <--
+" Меню Encoding -->
+" Выбор кодировки, в которой читать файл -->
+set wildmenu
+set wcm=<Tab>
+menu Encoding.Read.utf-8<Tab> :e ++enc=utf8 <CR>
+menu Encoding.Read.windows-1251<Tab> :e ++enc=cp1251<CR>
+menu Encoding.Read.koi8-r<Tab> :e ++enc=koi8-r<CR>
+menu Encoding.Read.cp866<Tab> :e ++enc=cp866<CR>
+map <F7> :emenu Encoding.Read.<TAB>
+" Выбор кодировки, в которой читать файл <--
 
-        " Выбор кодировки, в которой сохранять файл -->
-            set wildmenu
-            set wcm=<Tab>
-            menu Encoding.Write.utf-8<Tab> :set fenc=utf8 <CR>
-            menu Encoding.Write.windows-1251<Tab> :set fenc=cp1251<CR>
-            menu Encoding.Write.koi8-r<Tab> :set fenc=koi8-r<CR>
-            menu Encoding.Write.cp866<Tab> :set fenc=cp866<CR>
-            map <F8> :emenu Encoding.Write.<TAB>
-        " Выбор кодировки, в которой сохранять файл <--
+" Выбор кодировки, в которой сохранять файл -->
+set wildmenu
+set wcm=<Tab>
+menu Encoding.Write.utf-8<Tab> :set fenc=utf8 <CR>
+menu Encoding.Write.windows-1251<Tab> :set fenc=cp1251<CR>
+menu Encoding.Write.koi8-r<Tab> :set fenc=koi8-r<CR>
+menu Encoding.Write.cp866<Tab> :set fenc=cp866<CR>
+map <F8> :emenu Encoding.Write.<TAB>
+" Выбор кодировки, в которой сохранять файл <--
 
-        " Выбор формата концов строк (dos - <CR><NL>, unix - <NL>, mac - <CR>) -->
-            set wildmenu
-            set wcm=<Tab>
-            menu Encoding.End_line_format.unix<Tab><C-F8> :set fileformat=unix<CR>
-            menu Encoding.End_line_format.dos<Tab><C-F8> :set fileformat=dos<CR>
-            menu Encoding.End_line_format.mac<Tab><C-F8> :set fileformat=mac<CR>
-            map <F9> :emenu Encoding.End_line_format.<TAB>
-        " Выбор формата концов строк (dos - <CR><NL>, unix - <NL>, mac - <CR>) <--
-    " Меню Encoding <--
+" Выбор формата концов строк (dos - <CR><NL>, unix - <NL>, mac - <CR>) -->
+set wildmenu
+set wcm=<Tab>
+menu Encoding.End_line_format.unix<Tab><C-F8> :set fileformat=unix<CR>
+menu Encoding.End_line_format.dos<Tab><C-F8> :set fileformat=dos<CR>
+menu Encoding.End_line_format.mac<Tab><C-F8> :set fileformat=mac<CR>
+map <F9> :emenu Encoding.End_line_format.<TAB>
+" Выбор формата концов строк (dos - <CR><NL>, unix - <NL>, mac - <CR>) <--
+" Меню Encoding <--
 
-    " Включение автоматического разбиения строки на несколько
-    " строк фиксированной длины
-    menu Textwidth.off :set textwidth=0<CR>
-    menu Textwidth.on :set textwidth=78<CR>
+" Включение автоматического разбиения строки на несколько
+" строк фиксированной длины
+menu Textwidth.off :set textwidth=0<CR>
+menu Textwidth.on :set textwidth=78<CR>
 
 
 if &term =~ '^screen'
-   " tmux will send xterm-style keys when its xterm-keys option is on
-     execute "set <xUp>=\e[1;*A"
-     execute "set <xDown>=\e[1;*B"
-     execute "set <xRight>=\e[1;*C"
-     execute "set <xLeft>=\e[1;*D"
- endif
+	" tmux will send xterm-style keys when its xterm-keys option is on
+	execute "set <xUp>=\e[1;*A"
+	execute "set <xDown>=\e[1;*B"
+	execute "set <xRight>=\e[1;*C"
+	execute "set <xLeft>=\e[1;*D"
+endif

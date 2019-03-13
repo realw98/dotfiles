@@ -164,7 +164,7 @@ URxvt*cursorColor2:                     Blue
 
 
 ! Select the fonts to be used. This is a comma separated list of font names that are checked in order when trying to find glyphs for characters
-URxvt*font:                             xft:Liberation Mono for Powerline:autohint=false:pixelsize=17
+URxvt*font:                             xft:Liberation Mono for Powerline:autohint=true:pixelsize=16
 URxvt*boldFont:                         xft:Liberation Mono for Powerline:bold:autohint=true:pixelsize=17
 !URxvt*italicFont:                       xft:Bitstream Vera Sans Mono:italic:autohint=true:pixelsize=10
 !URxvt*boldItalicFont:                   xft:Bitstream Vera Sans Mono:bold:italic:autohint=true:pixelsize=10
