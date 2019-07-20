@@ -50,7 +50,7 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 #
-plugins=(colored-man-pages zsh-history-substring-search tmux bower npm zsh-navigation-tools web-search)
+plugins=(colored-man-pages tmux zsh-navigation-tools web-search)
 
 # User configuration
 #
