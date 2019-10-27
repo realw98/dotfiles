@@ -1,8 +1,8 @@
 #!/bin/bash
 
 
-colorzFirst=(1 1 2 2 4 4)
-colorzSecond=(3 5 3 6 5 6)
+colorzFirst=(1 1 2 2 4 4 1 2 4 3 5)
+colorzSecond=(3 5 3 6 5 6 7 7 7 7 7)
 arrayln=${#colorzFirst[*]}
 rnd=$((RANDOM % arrayln))
 cfirst=${colorzFirst[$rnd]}
