@@ -17,7 +17,7 @@ txBold=$(tput bold)   # bold
 txDim=$(tput dim)
 txReset=$(tput sgr0)   # reset attributes
 
-uptime=$(uptime -s)
+uptime=$(uptime -p)
 
 echo -ne "${fgFirst}${txDim}]${txReset}"
 echo -ne "${fgFirst}]]${txReset}"
@@ -27,7 +27,7 @@ echo -ne "${bgFirst}${fgSecond}${txDim}]]${txReset}"
 echo -ne "${bgFirst}${fgSecond}]]${txReset}"
 
 echo -ne "${bgSecond}${fgFirst}]]"
-echo -ne "${fgBlack}  Uptime since ${uptime}  "
+echo -ne "${fgBlack} ${uptime}  "
 echo -ne "${bgSecond}${fgFirst}[["
 
 echo -ne "${bgFirst}${fgSecond}[[${txReset}"
