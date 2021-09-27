@@ -1,4 +1,5 @@
 alias vi='vim'
 alias tmx='tmux attach || tmux'
+alias svi='sudo vim'
 
 
