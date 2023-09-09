@@ -95,10 +95,10 @@ URxvt*mouseWheelScrollPage:             false
 ! URxvt*insecure:                       boolean
 
 ! Use the specified colour as the windows background colour [default White]
-URxvt*background:                       #061116
+!URxvt*background:                       #061116
 
 !  Use the specified colour as the windows foreground colour [default Black]
-URxvt*foreground:                       White
+!URxvt*foreground:                       White
 
 ! Use the specified colour to disp1ay bold characters when the foreground colour is the default.
 ! URxvt*colorBD:                        color
@@ -134,10 +134,10 @@ URxvt*foreground:                       White
 URxvt*cursorBlink:                      false
 
 ! Use the specified colour for the cursor.  The default is to use the foreground colour
-URxvt*cursorColor:                      Green
+!URxvt*cursorColor:                      Green
 
 ! Use the specified colour for the colour of the cursor text.  For this to take effect, cursorColor must also be specified.  The default is to use the background colour
-URxvt*cursorColor2:                     Blue
+! URxvt*cursorColor2:                     Blue
 
 ! True: blank the pointer when a key is pressed or after a set number of seconds of inactivity. False: the pointer is always visible [default]
 !URxvt*pointerBlank:                     true
@@ -160,19 +160,13 @@ URxvt*cursorColor2:                     Blue
 ! Set window title string, the default title is the command-line specified after the -e option, if any, otherwise the application name
 ! URxvt*title:                          string
 
-
-
-
-
 ! Select the fonts to be used. This is a comma separated list of font names that are checked in order when trying to find glyphs for characters
 URxvt*font:                             xft:Liberation Mono:autohint=true:pixelsize=16
 URxvt*boldFont:                         xft:Liberation Mono:bold:autohint=true:pixelsize=17
+XTerm*font:                             xft:Liberation Mono:autohint=true:pixelsize=16
+XTerm*boldFont:                         xft:Liberation Mono:bold:autohint=true:pixelsize=17
 !URxvt*italicFont:                       xft:Bitstream Vera Sans Mono:italic:autohint=true:pixelsize=10
 !URxvt*boldItalicFont:                   xft:Bitstream Vera Sans Mono:bold:italic:autohint=true:pixelsize=10
-
-
-
-
 
 ! When font styles are not enabled, or this option is enabled (True default), bold/blink font styles imply high intensity foreground/background colours
 ! URxvt*intensityStyles:                boolean
@@ -322,3 +316,51 @@ URxvt*url-launcher:                   /usr/bin/xdg-open
 
 
 URxvt.iso14755_52: false
+
+#include "./dotfiles/xrdb/Cobalt2.xrdb"
+
+  URxvt*color0:       Ansi_0_Color
+  URxvt*color1:       Ansi_1_Color
+  URxvt*color2:       Ansi_2_Color
+  URxvt*color3:       Ansi_3_Color
+  URxvt*color4:       Ansi_4_Color
+  URxvt*color5:       Ansi_5_Color
+  URxvt*color6:       Ansi_6_Color
+  URxvt*color7:       Ansi_7_Color
+  URxvt*color8:       Ansi_8_Color
+  URxvt*color9:       Ansi_9_Color
+  URxvt*color10:      Ansi_10_Color
+  URxvt*color11:      Ansi_11_Color
+  URxvt*color12:      Ansi_12_Color
+  URxvt*color13:      Ansi_13_Color
+  URxvt*color14:      Ansi_14_Color
+  URxvt*color15:      Ansi_15_Color
+  URxvt*colorBD:      Bold_Color
+! URxvt*colorIT:      Italic_Color
+! URxvt*colorUL:      Underline_Color
+  URxvt*foreground:   Foreground_Color
+  URxvt*background:   Background_Color
+  URxvt*cursorColor:  Cursor_Color
+
+  XTerm*color0:      Ansi_0_Color
+  XTerm*color1:      Ansi_1_Color
+  XTerm*color2:      Ansi_2_Color
+  XTerm*color3:      Ansi_3_Color
+  XTerm*color4:      Ansi_4_Color
+  XTerm*color5:      Ansi_5_Color
+  XTerm*color6:      Ansi_6_Color
+  XTerm*color7:      Ansi_7_Color
+  XTerm*color8:      Ansi_8_Color
+  XTerm*color9:      Ansi_9_Color
+  XTerm*color10:     Ansi_10_Color
+  XTerm*color11:     Ansi_11_Color
+  XTerm*color12:     Ansi_12_Color
+  XTerm*color13:     Ansi_13_Color
+  XTerm*color14:     Ansi_14_Color
+  XTerm*color15:     Ansi_15_Color
+  XTerm*colorBD:     Bold_Color
+  XTerm*colorIT:     Italic_Color
+  XTerm*colorUL:     Underline_Color
+  XTerm*foreground:  Foreground_Color
+  XTerm*background:  Background_Color
+  XTerm*cursorColor: Cursor_Color
