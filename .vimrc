@@ -81,7 +81,7 @@ set tags=tags\ $VIMRUNTIME/systags " искать теги в текущй ди�
 "Кодировка редактора (терминала) по умолчанию (при создании все файлы приводятся к этой кодировке)
 
 if has('win32')
-	set encoding=cp1251
+	set encoding=utf-8
 	" формат файла по умолчанию (влияет на окончания строк) - будет перебираться в указанном порядке
 	set fileformat=dos
 else
@@ -94,25 +94,8 @@ set fencs=utf-8,cp1251,koi8-r,cp866
 "" Перед сохранением .vimrc обновлять дату последнего изменения
 syntax on " включить подсветку синтаксиса
 
-"" Применять типы файлов
 
 "ПЛАГИНЫ!!!
-
-"filetype off
-"set rtp+=~/.vim/bundle/Vundle.vim
-"call vundle#begin()
-"Plugin 'VundleVim/Vundle.vim'
-"Plugin 'scrooloose/nerdtree'
-"Plugin 'vim-airline/vim-airline'
-"Plugin 'vim-airline/vim-airline-themes'
-"Plugin 'jlanzarotta/bufexplorer'
-"Plugin 'flazz/vim-colorschemes'
-"Plugin 'kien/ctrlp.vim'
-"Plugin 'bling/vim-bufferline'
-"call vundle#end()
-
-"set statusline=%F%m%r%h%w\ [FF,FE,TE=%{&fileformat},%{&fileencoding},%{&encoding}\]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
-"
 
 set noshowmode
 
@@ -132,10 +115,7 @@ Plug 'bling/vim-bufferline'
 Plug 'leafgarland/typescript-vim'
 Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-
-"if has('unix')
-"	Plug 'ryanoasis/vim-devicons'
-"endif
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
@@ -188,7 +168,7 @@ if has('gui')
 	set guioptions-=T
 
 	if has('win32')
-		set guifont=Lucida_Console:h10:cRUSSIAN::
+		set guifont=JetBrainsMono_NFM:h12:cRUSSIAN::
 	else
 		set guifont=Terminus\ 10
 	endif
