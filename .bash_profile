@@ -7,3 +7,4 @@ if [[ -f ~/.bashrc ]] ; then
 fi
 
 [ -s ~/dotfiles/welcome.sh ] && source ~/dotfiles/welcome.sh
+[ -s ~/.cargo/env ] && source "$HOME/.cargo/env"
