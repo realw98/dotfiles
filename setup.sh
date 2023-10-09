@@ -20,6 +20,7 @@ git clone --depth=1 https://github.com/NvChad/NvChad.git ~/.config/nvim
 ln -s ~/dotfiles/.Xresources ~/.Xresources
 ln -s ~/dotfiles/.zshrc ~/.zshrc 
 ln -s ~/dotfiles/.vimrc ~/.vimrc
+mkdir -p ~/.config/tmux
 ln -s ~/dotfiles/.tmux.conf ~/.config/tmux/tmux.conf
 mv ~/.bashrc ~/.bashrc.orig
 ln -s ~/dotfiles/.bashrc ~/.bashrc
