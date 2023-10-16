@@ -16,6 +16,7 @@ git clone --depth=1 https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 cd ~
 mkdir -p ~/.config/nvim
 git clone --depth=1 https://github.com/NvChad/NvChad.git ~/.config/nvim
+ln -s ~/dotfiles/chadrc.lua ~/.config/nvim/lua/custom/chadrc.lua
 
 ln -s ~/dotfiles/.Xresources ~/.Xresources
 ln -s ~/dotfiles/.zshrc ~/.zshrc 
