@@ -1,9 +1,6 @@
-
-
-
 ! Specifies the terminal type name to be set in the TERM environment variable
-URxvt*termName:                         rxvt-unicode-256color
-XTerm*termName:							xterm-256color
+URxvt*termName:             rxvt-unicode-256color
+XTerm*termName:             xterm-256color
 
 ! Create the window with the specified X window geometry [default 80x24]
 URxvt*geometry:                         80x30
@@ -95,7 +92,7 @@ URxvt*mouseWheelScrollPage:             false
 ! URxvt*insecure:                       boolean
 
 ! Use the specified colour as the windows background colour [default White]
-!URxvt*background:                       #061116
+URxvt*background:                       #23252e
 
 !  Use the specified colour as the windows foreground colour [default Black]
 !URxvt*foreground:                       White
@@ -160,13 +157,18 @@ URxvt*cursorBlink:                      false
 ! Set window title string, the default title is the command-line specified after the -e option, if any, otherwise the application name
 ! URxvt*title:                          string
 
+
+
 ! Select the fonts to be used. This is a comma separated list of font names that are checked in order when trying to find glyphs for characters
-URxvt*font:                             xft:Liberation Mono:autohint=true:pixelsize=16
-URxvt*boldFont:                         xft:Liberation Mono:bold:autohint=true:pixelsize=17
-XTerm*font:                             xft:Liberation Mono:autohint=true:pixelsize=16
-XTerm*boldFont:                         xft:Liberation Mono:bold:autohint=true:pixelsize=17
+!URxvt*font:                             xft:Liberation Mono:autohint=true:pixelsize=16
+!URxvt*boldFont:                         xft:Liberation Mono:bold:autohint=true:pixelsize=16
+!XTerm*font:                             xft:Liberation Mono:autohint=true:pixelsize=16
+XTerm*font:                             xft:JetBrainsMono Nerd Font:autohint=true:pixelsize=15
+URxvt*font:                             xft:JetBrainsMono Nerd Font:autohint=true:pixelsize=15
+URxvt*boldFont:                         xft:JetBrainsMono Nerd Font:bold:autohint=true:pixelsize=15
 !URxvt*italicFont:                       xft:Bitstream Vera Sans Mono:italic:autohint=true:pixelsize=10
 !URxvt*boldItalicFont:                   xft:Bitstream Vera Sans Mono:bold:italic:autohint=true:pixelsize=10
+
 
 ! When font styles are not enabled, or this option is enabled (True default), bold/blink font styles imply high intensity foreground/background colours
 ! URxvt*intensityStyles:                boolean

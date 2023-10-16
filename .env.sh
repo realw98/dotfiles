@@ -1,7 +1,6 @@
-export LANG=ru_RU.UTF-8
-export EDITOR=vim
-export VISUAL=vim
-export PAGER=less
+export EDITOR=nvim
+export VISUAL=nvim
+export PAGER=most
 export CFLAGS="-march=native -O2 -pipe"
 export CPPFLAGS=$CFLAGS
 export MANPATH="/usr/local/man:$MANPATH"

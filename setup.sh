@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/local/bin/bash
 
 
 cd $HOME
@@ -16,13 +16,17 @@ git clone --depth=1 https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 cd ~
 mkdir -p ~/.config/nvim
 git clone --depth=1 https://github.com/NvChad/NvChad.git ~/.config/nvim
+ln -s ~/dotfiles/chadrc.lua ~/.config/nvim/lua/custom/chadrc.lua
 
 ln -s ~/dotfiles/.Xresources ~/.Xresources
 ln -s ~/dotfiles/.zshrc ~/.zshrc 
 ln -s ~/dotfiles/.vimrc ~/.vimrc
+
 mkdir -p ~/.config/tmux
 ln -s ~/dotfiles/.tmux.conf ~/.config/tmux/tmux.conf
+
 mv ~/.bashrc ~/.bashrc.orig
 ln -s ~/dotfiles/.bashrc ~/.bashrc
+
 mv ~/.bash_profile ~/.bash_profile.orig
 ln -s ~/dotfiles/.bash_profile ~/.bash_profile
