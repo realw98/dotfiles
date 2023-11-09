@@ -1,6 +1,7 @@
 ! Specifies the terminal type name to be set in the TERM environment variable
 URxvt*termName:             rxvt-unicode-256color
 XTerm*termName:             xterm-256color
+XTerm*visualBell: true
 
 ! Create the window with the specified X window geometry [default 80x24]
 URxvt*geometry:                         80x30
