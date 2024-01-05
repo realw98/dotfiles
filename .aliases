@@ -1,6 +1,6 @@
-alias vi='vim'
+alias vi='nvim'
 alias tmx='tmux attach || tmux'
-alias svi='sudo vim'
+alias svi='sudo nvim'
 alias sduo=sudo
 
 
