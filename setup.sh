@@ -16,12 +16,15 @@ git clone --depth=1 https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 cd ~
 mkdir -p ~/.config/nvim
 git clone --depth=1 https://github.com/NvChad/starter ~/.config/nvim
-#ln -s ~/dotfiles/chadrc.lua ~/.config/nvim/lua/custom/chadrc.lua
 
 ln -s ~/dotfiles/.Xresources ~/.Xresources
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/dotfiles/.zshenv ~/.zshenv
 ln -s ~/dotfiles/.vimrc ~/.vimrc
+ln -s ~/dotfiles/hypr ~/.config/hypr
+ln -s ~/dotfiles/dunst ~/.config/dunst
+ln -s ~/dotfiles/waybar ~/.config/waybar
+
 mkdir -p ~/.config/tmux
 ln -s ~/dotfiles/.tmux.conf ~/.config/tmux/tmux.conf
 mv ~/.bashrc ~/.bashrc.orig
