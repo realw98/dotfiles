@@ -21,9 +21,10 @@ ln -s ~/dotfiles/.Xresources ~/.Xresources
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/dotfiles/.zshenv ~/.zshenv
 ln -s ~/dotfiles/.vimrc ~/.vimrc
-ln -s ~/dotfiles/hypr ~/.config/hypr
-ln -s ~/dotfiles/dunst ~/.config/dunst
-ln -s ~/dotfiles/waybar ~/.config/waybar
+ln -si ~/dotfiles/hypr ~/.config/hypr
+ln -si ~/dotfiles/dunst ~/.config/dunst
+ln -si ~/dotfiles/waybar ~/.config/waybar
+ln -si ~/dotfiles/mako ~/.config/mako
 
 mkdir -p ~/.config/tmux
 ln -s ~/dotfiles/.tmux.conf ~/.config/tmux/tmux.conf
