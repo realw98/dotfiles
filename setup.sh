@@ -21,9 +21,10 @@ git clone --depth=1 https://github.com/NvChad/starter ~/.config/nvim
 ln -s ~/dotfiles/.Xresources ~/.Xresources
 ln -s ~/dotfiles/.zshrc ~/.zshrc 
 ln -s ~/dotfiles/.vimrc ~/.vimrc
-ln -s ~/dotfiles/dunst ~/.config/dunst
-ln -s ~/dotfiles/hypr ~/.config/hypr
-ln -s ~/dotfiles/waybar ~/.config/waybar
+ln -sT ~/dotfiles/dunst ~/.config/dunst
+ln -sT ~/dotfiles/hypr ~/.config/hypr
+ln -sT ~/dotfiles/waybar ~/.config/waybar
+ln -sT ~/dotfiles/mako ~/.config/mako
 
 mkdir -p ~/.config/tmux
 ln -s ~/dotfiles/.tmux.conf ~/.config/tmux/tmux.conf
