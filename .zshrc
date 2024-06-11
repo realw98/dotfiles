@@ -59,9 +59,6 @@ inc_file() {
 	[ -s $1 ] && source $1
 }
 
-inc_file ~/dotfiles/.env.sh
-inc_file ~/.env.local.sh
-
 source $ZSH/oh-my-zsh.sh
 
 inc_file /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
