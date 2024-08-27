@@ -2,5 +2,5 @@ alias vi='nvim'
 alias tmx='tmux attach || tmux'
 alias svi='sudo nvim'
 alias sduo=sudo
-
+alias ls=exa
 
