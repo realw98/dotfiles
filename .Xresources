@@ -99,7 +99,7 @@ URxvt*background: #1e2030
 XTerm*background: #1e2030
 
 !  Use the specified colour as the windows foreground colour [default Black]
-!URxvt*foreground:                       White
+URxvt*foreground:                       White
 
 ! Use the specified colour to disp1ay bold characters when the foreground colour is the default.
 ! URxvt*colorBD:                        color
