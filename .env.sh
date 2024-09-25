@@ -5,5 +5,5 @@ export CFLAGS="-march=native -O2 -pipe"
 export CPPFLAGS=$CFLAGS
 export MANPATH="/usr/local/man:$MANPATH"
 export ORIGINAL_PATH=$PATH
-export PATH="$HOME/bin:$HOME/.local/bin:$ORIGINAL_PATH"
+export PATH="$HOME/.local/bin:$ORIGINAL_PATH"
 

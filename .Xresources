@@ -10,10 +10,10 @@ URxvt*geometry:                         80x30
 URxvt*loginShell:                       false
 
 ! Use the specified colour for the scrollbar [default #B2B2B2]
-URxvt*scrollColor:                      #777777
+URxvt*scrollColor:                      #444444
 
 ! Set scrollbar style to rxvt, plain, next or xterm. plain is the authors favourite.
-URxvt*scrollstyle:                      plain
+URxvt*scrollstyle:                      xterm
 
 ! True: scroll to bottom when a non-special key pressed.  Special keys are those which are intercepted by rxvt for special handling andnt passed onto the shell; False: dont scroll to bottom
 URxvt*scrollTtyKeypress:                true
@@ -39,9 +39,11 @@ URxvt*skipScroll:                       true
 
 ! True: enable the scrollbar [default]; option -sb. False: disable the scrollbar
 URxvt*scrollBar:                        true
+XTerm*scrollBar:                        true
 
 ! place the scrollbar on the right of the window
 URxvt*scrollBar_right:                  true
+XTerm*rightScrollBar:                   true
 
 ! di5play an rxvt scrollbar with/without a trough
 URxvt*scrollBar_floating:               false
@@ -93,10 +95,11 @@ URxvt*mouseWheelScrollPage:             false
 ! URxvt*insecure:                       boolean
 
 ! Use the specified colour as the windows background colour [default White]
-URxvt*background:                       #23252e
+URxvt*background: #1e2030
+XTerm*background: #1e2030
 
 !  Use the specified colour as the windows foreground colour [default Black]
-!URxvt*foreground:                       White
+URxvt*foreground:                       White
 
 ! Use the specified colour to disp1ay bold characters when the foreground colour is the default.
 ! URxvt*colorBD:                        color
@@ -320,50 +323,4 @@ URxvt*url-launcher:                   /usr/bin/xdg-open
 
 URxvt.iso14755_52: false
 
-#include "./dotfiles/xrdb/Cobalt2.xrdb"
 
-  URxvt*color0:       Ansi_0_Color
-  URxvt*color1:       Ansi_1_Color
-  URxvt*color2:       Ansi_2_Color
-  URxvt*color3:       Ansi_3_Color
-  URxvt*color4:       Ansi_4_Color
-  URxvt*color5:       Ansi_5_Color
-  URxvt*color6:       Ansi_6_Color
-  URxvt*color7:       Ansi_7_Color
-  URxvt*color8:       Ansi_8_Color
-  URxvt*color9:       Ansi_9_Color
-  URxvt*color10:      Ansi_10_Color
-  URxvt*color11:      Ansi_11_Color
-  URxvt*color12:      Ansi_12_Color
-  URxvt*color13:      Ansi_13_Color
-  URxvt*color14:      Ansi_14_Color
-  URxvt*color15:      Ansi_15_Color
-  URxvt*colorBD:      Bold_Color
-! URxvt*colorIT:      Italic_Color
-! URxvt*colorUL:      Underline_Color
-  URxvt*foreground:   Foreground_Color
-  URxvt*background:   Background_Color
-  URxvt*cursorColor:  Cursor_Color
-
-  XTerm*color0:      Ansi_0_Color
-  XTerm*color1:      Ansi_1_Color
-  XTerm*color2:      Ansi_2_Color
-  XTerm*color3:      Ansi_3_Color
-  XTerm*color4:      Ansi_4_Color
-  XTerm*color5:      Ansi_5_Color
-  XTerm*color6:      Ansi_6_Color
-  XTerm*color7:      Ansi_7_Color
-  XTerm*color8:      Ansi_8_Color
-  XTerm*color9:      Ansi_9_Color
-  XTerm*color10:     Ansi_10_Color
-  XTerm*color11:     Ansi_11_Color
-  XTerm*color12:     Ansi_12_Color
-  XTerm*color13:     Ansi_13_Color
-  XTerm*color14:     Ansi_14_Color
-  XTerm*color15:     Ansi_15_Color
-  XTerm*colorBD:     Bold_Color
-  XTerm*colorIT:     Italic_Color
-  XTerm*colorUL:     Underline_Color
-  XTerm*foreground:  Foreground_Color
-  XTerm*background:  Background_Color
-  XTerm*cursorColor: Cursor_Color
