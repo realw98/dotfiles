@@ -1,0 +1,6 @@
+#!/bin/bash
+
+xrdb -merge ~/.Xresources 
+csd-xsettings &
+xxkb &
+
