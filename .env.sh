@@ -1,9 +1,6 @@
-export EDITOR=nvim
-export VISUAL=nvim
+export EDITOR=vim
+export VISUAL=vim
 export PAGER=most
-export CFLAGS="-march=native -O2 -pipe"
-export CPPFLAGS=$CFLAGS
-export MANPATH="/usr/local/man:$MANPATH"
 export ORIGINAL_PATH=$PATH
 export PATH="$HOME/.local/bin:$ORIGINAL_PATH"
 export NNN_COLORS='2351'
@@ -12,4 +9,4 @@ BLK="04" CHR="04" DIR="04" EXE="00" REG="00" HARDLINK="00" SYMLINK="06" MISSING=
 export NNN_FCOLORS="$BLK$CHR$DIR$EXE$REG$HARDLINK$SYMLINK$MISSING$ORPHAN$FIFO$SOCK$OTHER"
 export NNN_OPTS='cCEHdr'
 export NNN_ARCHIVE="\\.(7z|a|ace|alz|arc|arj|bz|bz2|cab|cpio|deb|gz|jar|lha|lz|lzh|lzma|lzo|rar|rpm|rz|t7z|tar|tbz|tbz2|tgz|tlz|txz|tZ|tzo|war|xpi|xz|Z|zip)$"
-export NNN_OPENER="$HOME/.config/nnn/plugins/nuke"
+export NNN_OPENER="most"

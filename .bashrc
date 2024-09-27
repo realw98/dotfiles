@@ -24,37 +24,17 @@ case "$TERM" in
     xterm-color|*-256color) color_prompt=yes;;
 esac
 
-
-if [ "$color_prompt" = "yes" ]; then
-	if [[ ${EUID} == 0 ]] ; then
-		PS1='\[\033[01;31m\]\h\[\033[01;34m\] \w #\[\033[00m\] '
-	else
-		PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\] '
-	fi
-else
-	if [[ ${EUID} == 0 ]]; then
-		PS1='\h \w # '
-	else
-		PS1='\u@\h \w \$ '
-	fi
-fi
-
-if ! shopt -oq posix; then
-  if [ -f /usr/local/share/bash-completion/bash_completion.sh ]; then
-    . /usr/local/share/bash-completion/bash_completion.sh
-  elif [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
-fi
+inc_file() {
+  [ -s $1 ] && source $1
+}
 
 source ~/dotfiles/.aliases
 source ~/dotfiles/.env.sh
-[ -s ~/.env.local.sh ] && source ~/.env.local.sh
+inc_file ~/.env.local.sh
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+if [ "$color_prompt" = "yes" ]; then
+	PS1='\[\033[01;32m\]${TERMUX_HOSTNAME}\[\033[01;34m\] \w \$\[\033[00m\] '
+else
+	PS1='${TERMUX_HOSTNAME} \w \$ '
+fi
 
-[ -s "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"

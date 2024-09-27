@@ -1,7 +1,3 @@
-alias vi='nvim'
 alias tmx='tmux attach || tmux'
-alias svi='sudo nvim'
-alias sduo=sudo
-alias far='far2l --tty'
 alias ls=exa
 
