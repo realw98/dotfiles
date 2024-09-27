@@ -24,6 +24,7 @@ cd ~
 ln -s ~/dotfiles/.zshenv ~/.zshenv
 ln -s ~/dotfiles/.zshrc ~/.zshrc 
 ln -s ~/dotfiles/.vimrc ~/.vimrc
+ln -s ~/dotfiles/.nanorc ~/.nanorc
 
 mkdir -p ~/.config/tmux
 ln -s ~/dotfiles/.tmux.conf ~/.config/tmux/tmux.conf
