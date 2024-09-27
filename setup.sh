@@ -15,7 +15,7 @@ git clone --depth=1 https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 cd ~
 
-git clone --depth=1 https://github.com/adi1090x/termux-stylesetup.sh
+git clone --depth=1 https://github.com/adi1090x/termux-style
 cd termux-style
 ./install
 
