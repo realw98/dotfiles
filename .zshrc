@@ -65,7 +65,7 @@ inc_file /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 inc_file /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highligting.zsh
 export ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets cursor root)
 
-inc_file ~/dotfiles/.aliases
+inc_file ~/.aliases
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

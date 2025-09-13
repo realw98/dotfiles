@@ -49,9 +49,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
-source ~/dotfiles/.aliases
-source ~/dotfiles/.env.sh
-[ -s ~/.env.local.sh ] && source ~/.env.local.sh
+source ~/.aliases
+source ~/dotfiles/.env
+[ -s ~/.env ] && source ~/.env
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"  # This loads nvm

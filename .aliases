@@ -3,5 +3,9 @@ alias tmx='tmux attach || tmux'
 alias svi='sudo nvim'
 alias sduo=sudo
 alias far='far2l --tty'
-alias ls=exa
+alias ls=eza
+alias la='eza -la'
+alias e=nano
+alias m=micro
+alias man=qman
 

@@ -1487,7 +1487,7 @@ WorkspaceNames=" 1 ", " 2 ", " 3 ", " 4 "
 # DesktopBackgroundColor=""
 
 #  Desktop background image(s), comma separated.
- DesktopBackgroundImage="/mnt/priv/priv/wp/1160402.jpg"
+ DesktopBackgroundImage="/mnt/priv/priv/wp/e2e220e0b3d11323c919873015ad4f7f.jpg"
 
 #  Paint the background image over all multihead monitors combined.
 # DesktopBackgroundMultihead=0 # 0/1

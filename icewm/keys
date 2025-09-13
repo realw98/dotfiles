@@ -10,7 +10,7 @@
 #
 key "Super+a"            sakura
 key "Super+i"            vivaldi
-key "Super+e"            nemo
+key "Super+e"            /bin/sh -c "dolphin || thunar || nemo"
 
 key "Super+KP_Subtract"     amixer sset Master 5%-
 key "Super+KP_Add"          amixer sset Master 5%+
@@ -26,9 +26,6 @@ key "Super+KP_Add"          amixer sset Master 5%+
 key "XF86AudioLowerVolume"  amixer sset Master 5%-
 key "XF86AudioRaiseVolume"  amixer sset Master 5%+
 key "XF86AudioMute"         amixer sset Master toggle
-key "XF86HomePage"         sensible-browser about:blank
-key "XF86Search"            sensible-browser https://www.duckduckgo.com
-key "XF86Eject"             eject
 key "XF86Calculator"        /bin/sh -c "gnome-calculator || xcalc || ( type bc >/dev/null 2>&1 && x-terminal-emulator -e bc -l)"
 
 switchkey "Super+p"         icewm-menu-xrandr
