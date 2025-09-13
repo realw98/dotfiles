@@ -99,7 +99,8 @@ URxvt*background: #1e2030
 XTerm*background: #1e2030
 
 !  Use the specified colour as the windows foreground colour [default Black]
-URxvt*foreground:                       White
+URxvt*foreground: White
+XTerm*foreground: White
 
 ! Use the specified colour to disp1ay bold characters when the foreground colour is the default.
 ! URxvt*colorBD:                        color
@@ -135,10 +136,11 @@ URxvt*foreground:                       White
 URxvt*cursorBlink:                      false
 
 ! Use the specified colour for the cursor.  The default is to use the foreground colour
-!URxvt*cursorColor:                      Green
+URxvt*cursorColor:                      Green
+XTerm*cursorColor:                      Green
 
 ! Use the specified colour for the colour of the cursor text.  For this to take effect, cursorColor must also be specified.  The default is to use the background colour
-! URxvt*cursorColor2:                     Blue
+ URxvt*cursorColor2:                     Blue
 
 ! True: blank the pointer when a key is pressed or after a set number of seconds of inactivity. False: the pointer is always visible [default]
 !URxvt*pointerBlank:                     true

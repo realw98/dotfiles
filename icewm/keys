@@ -8,7 +8,7 @@
 # Omit the XK_ prefixs and replace XF86XK_ prefixes by XF86.
 # Valid modifiers are Alt, AltGr, Ctrl, Shift, Meta, Super and Hyper.
 #
-key "Super+a"            sakura
+key "Super+a"            xterm
 key "Super+i"            vivaldi
 key "Super+e"            /bin/sh -c "dolphin || thunar || nemo"
 
