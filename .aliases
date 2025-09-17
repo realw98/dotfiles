@@ -1,6 +1,8 @@
-alias vi='nvim'
+alias vi='vim'
 alias tmx='tmux attach || tmux'
-alias svi='sudo nvim'
+alias svi='sudo vim'
 alias sduo=sudo
-alias ls=exa
-
+alias ls=eza
+alias la='eza -la'
+alias e=nano
+alias m=micro

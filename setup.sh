@@ -17,14 +17,9 @@ cd ~
 mkdir -p ~/.config/nvim
 git clone --depth=1 https://github.com/NvChad/starter ~/.config/nvim
 
-ln -s ~/dotfiles/.Xresources ~/.Xresources
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/dotfiles/.zshenv ~/.zshenv
 ln -s ~/dotfiles/.vimrc ~/.vimrc
-ln -si ~/dotfiles/hypr ~/.config/hypr
-ln -si ~/dotfiles/dunst ~/.config/dunst
-ln -si ~/dotfiles/waybar ~/.config/waybar
-ln -si ~/dotfiles/mako ~/.config/mako
 
 mkdir -p ~/.config/tmux
 ln -s ~/dotfiles/.tmux.conf ~/.config/tmux/tmux.conf
@@ -32,3 +27,4 @@ mv ~/.bashrc ~/.bashrc.orig
 ln -s ~/dotfiles/.bashrc ~/.bashrc
 mv ~/.bash_profile ~/.bash_profile.orig
 ln -s ~/dotfiles/.bash_profile ~/.bash_profile
+cp ~/dotfiles/.aliases ~/.aliases
