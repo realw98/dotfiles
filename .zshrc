@@ -50,7 +50,7 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 #
-plugins=(colored-man-pages tmux zsh-navigation-tools web-search)
+plugins=(catimg tldr zsh-navigation-tools)
 
 # User configuration
 #
@@ -58,6 +58,8 @@ plugins=(colored-man-pages tmux zsh-navigation-tools web-search)
 inc_file() {
 	[ -s $1 ] && source $1
 }
+
+inc_file ~/.zshrc.local
 
 source $ZSH/oh-my-zsh.sh
 
@@ -68,6 +70,6 @@ export ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets cursor root)
 inc_file ~/.aliases
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+inc_file "$NVM_DIR/nvm.sh"
+inc_file "$NVM_DIR/bash_completion"
 
