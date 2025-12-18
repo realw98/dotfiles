@@ -8,4 +8,4 @@ alias ls=eza
 alias la='eza -la'
 alias e=nano
 alias m=micro
-
+alias dmesg='dmesg --color=auto | less -r'
