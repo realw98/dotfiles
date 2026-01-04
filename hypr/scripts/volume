@@ -2,6 +2,8 @@
 
 iDIR="$HOME/.config/mako/icons"
 
+vol_step=3
+
 # Get Volume
 get_volume() {
 	volume=$(pamixer --get-volume)
@@ -13,11 +15,11 @@ get_icon() {
 	current=$(get_volume)
 	if [[ "$current" -eq "0" ]]; then
 		echo "$iDIR/volume-mute.png"
-	elif [[ ("$current" -ge "0") && ("$current" -le "30") ]]; then
+	elif [[ ("$current" -ge "0") && ("$current" -le "15") ]]; then
 		echo "$iDIR/volume-low.png"
-	elif [[ ("$current" -ge "30") && ("$current" -le "60") ]]; then
+	elif [[ ("$current" -ge "15") && ("$current" -le "33") ]]; then
 		echo "$iDIR/volume-mid.png"
-	elif [[ ("$current" -ge "60") && ("$current" -le "100") ]]; then
+	elif [[ ("$current" -ge "32") && ("$current" -le "100") ]]; then
 		echo "$iDIR/volume-high.png"
 	fi
 }
@@ -29,12 +31,12 @@ notify_user() {
 
 # Increase Volume
 inc_volume() {
-	pamixer -i 5 && notify_user
+	pamixer -i $vol_step && notify_user
 }
 
 # Decrease Volume
 dec_volume() {
-	pamixer -d 5 && notify_user
+	pamixer -d $vol_step && notify_user
 }
 
 # Toggle Mute
