@@ -29,8 +29,9 @@ inc_file() {
 }
 
 source ~/dotfiles/.aliases
-source ~/dotfiles/.env.sh
-inc_file ~/.env.local.sh
+source ~/dotfiles/.env
+inc_file ~/.aliases
+inc_file ~/.env
 
 if [ "$color_prompt" = "yes" ]; then
 	PS1='\[\033[01;32m\]${TERMUX_HOSTNAME}\[\033[01;34m\] \w \$\[\033[00m\] '
