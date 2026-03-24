@@ -49,12 +49,16 @@ if ! shopt -oq posix; then
   fi
 fi
 
-source ~/.aliases
-source ~/dotfiles/.env
-[ -s ~/.env ] && source ~/.env
+inc_file() {
+	[ -s "$1" ] && source "$1"
+}
+
+inc_file ~/.aliases
+inc_file ~/dotfiles/.env
+inc_file  ~/.env
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+inc_file "$NVM_DIR/nvm.sh"  # This loads nvm
+inc_file "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-[ -s "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
+inc_file "$HOME/.cargo/env"
