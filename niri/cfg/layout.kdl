@@ -1,0 +1,38 @@
+    layout {
+        gaps 12 // Gap between windows
+        center-focused-column "never" // Don’t auto-center focused column
+
+        background-color "transparent" // <- needed for noctalia-shell to set wallpaper
+
+        preset-column-widths {
+            proportion 0.33333
+            proportion 0.5
+            proportion 0.66667
+						proportion 1.0
+        }
+
+				 default-column-width { proportion 1.0; }
+
+        struts {}
+
+				border {
+					width 1
+			    active-color "#ffc87f"
+				  inactive-color "#505050"
+					urgent-color "#9b0000"
+				}
+
+		   focus-ring {
+        width 1
+        active-color "#7fc8ff"
+        inactive-color "#505050"
+        urgent-color "#9b0000"
+        // active-gradient from="#80c8ff" to="#bbddff" angle=45
+        // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
+        // urgent-gradient from="#800" to="#a33" angle=45
+    }
+    }
+
+		workspace "T"
+		workspace "B"
+		workspace "M"
