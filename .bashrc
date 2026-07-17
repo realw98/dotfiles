@@ -29,7 +29,7 @@ if [ "$color_prompt" = "yes" ]; then
 	if [[ ${EUID} == 0 ]] ; then
 		PS1='\[\033[01;31m\]\h\[\033[01;34m\] \w #\[\033[00m\] '
 	else
-		PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\] '
+		PS1='\[\033[01;33m\]\u@\h\[\033[01;32m\] \w \$\[\033[00m\] '
 	fi
 else
 	if [[ ${EUID} == 0 ]]; then
@@ -50,7 +50,7 @@ source ~/.aliases
 source ~/dotfiles/.env
 [ -s ~/.env ] && source ~/.env
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 

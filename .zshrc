@@ -12,7 +12,7 @@ ZSH_THEME="gentoo"
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
+HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
@@ -50,18 +50,24 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 #
-plugins=(colored-man-pages tmux zsh-navigation-tools)
+plugins=(zsh-navigation-tools)
 
 # User configuration
 
 source $ZSH/oh-my-zsh.sh
 
+inc_file() {
+    [-s $1] && source $1
+}
+
+inc_file ~/.zshrc.local
+
 inc_file /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 inc_file /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highligting.zsh
 export ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets cursor root)
 
-inc_file ~/dotfiles/.aliases
+inc_file ~/.aliases
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+inc_file "$NVM_DIR/nvm.sh"
+
