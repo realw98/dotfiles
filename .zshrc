@@ -5,7 +5,7 @@ export ZSH=~/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="af-magic" # set by `omz`
+ZSH_THEME="mono" # set by `omz`
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -61,6 +61,7 @@ inc_file() {
 
 inc_file ~/.zshrc.local
 
+export SOLARIZED_THEME="light"
 source $ZSH/oh-my-zsh.sh
 
 inc_file /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

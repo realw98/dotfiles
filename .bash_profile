@@ -6,5 +6,5 @@ if [[ -f ~/.bashrc ]] ; then
 	. ~/.bashrc
 fi
 
-[ -s ~/dotfiles/welcome.sh ] && source ~/dotfiles/welcome.sh
-[ -s ~/.cargo/env ] && source "$HOME/.cargo/env"
+inc_file ~/dotfiles/welcome.sh
+inc_file "$HOME/.cargo/env"

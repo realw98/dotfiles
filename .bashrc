@@ -18,25 +18,15 @@ shopt -s cmdhist
 shopt -s histappend histreedit histverify
 shopt -s extglob
 
-export HISTCONTROL=ignoredups
+export HISTCONTROL=ignoreboth
 
-case "$TERM" in
-    xterm-color|*-256color) color_prompt=yes;;
-esac
+bld=$(tput bold)
+sgr=$(tput sgr0)
 
-
-if [ "$color_prompt" = "yes" ]; then
-	if [[ ${EUID} == 0 ]] ; then
-		PS1='\[\033[01;31m\]\h\[\033[01;34m\] \w #\[\033[00m\] '
-	else
-		PS1='\[\033[01;32m\]\h\[\033[01;34m\] \w \$\[\033[00m\] '
-	fi
+if [[ ${EUID} == 0 ]] ; then
+	PS1="${bld}\h \w #${sgr} "
 else
-	if [[ ${EUID} == 0 ]]; then
-		PS1='\h \w # '
-	else
-		PS1='\h \w \$ '
-	fi
+	PS1="${bld}\h \w \$${sgr} "
 fi
 
 if ! shopt -oq posix; then

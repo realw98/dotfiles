@@ -131,7 +131,8 @@ else
 	if has('win32')
 		colorscheme default
 	else
-		colorscheme evening
+		colorscheme github
+		set background=light
 	endif
 endif
 
