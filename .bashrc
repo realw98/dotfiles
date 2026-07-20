@@ -18,7 +18,7 @@ shopt -s cmdhist
 shopt -s histappend histreedit histverify
 shopt -s extglob
 
-export HISTCONTROL=ignoredups
+export HISTCONTROL=ignoreboth
 
 case "$TERM" in
     xterm-color|*-256color) color_prompt=yes;;
@@ -39,26 +39,20 @@ else
 	fi
 fi
 
-if ! shopt -oq posix; then
-  if [ -f /usr/local/share/bash-completion/bash_completion.sh ]; then
-    . /usr/local/share/bash-completion/bash_completion.sh
-  elif [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
-fi
-
 inc_file() {
 	[ -s "$1" ] && source "$1"
 }
 
+if ! shopt -oq posix; then
+	inc_file /usr/share/bash-completion/bash_completion || inc_file /etc/bash_completion
+fi
+
 inc_file ~/.aliases
 inc_file ~/dotfiles/.env
-inc_file  ~/.env
+inc_file ~/.env
 
 export NVM_DIR="$HOME/.nvm"
 inc_file "$NVM_DIR/nvm.sh"  # This loads nvm
 inc_file "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 inc_file "$HOME/.cargo/env"
+
