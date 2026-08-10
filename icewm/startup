@@ -1,6 +1,6 @@
 #!/bin/bash
 
-xrdb -merge ~/.Xresources 
-csd-xsettings &
+dbus-update-activation-environment --systemd QT_QPA_PLATFORM QT_QPA_PLATFORMTHEME
+xrdb -merge ~/.Xresources
 xxkb &
-
+csd-xsettings &
