@@ -6,11 +6,12 @@ local o = vim.o
 o.cursorlineopt ='both' -- to enable cursorline!
 o.list = true -- Enable list mode globally
 vim.opt.listchars = {
-  tab = '»·', -- Show tabs as right-arrow and dot
+  tab = '»-', -- Show tabs as right-arrow and dot
   space = '·', -- Show spaces as dots
   trail = '•', -- Show trailing whitespace as dots
   -- eol = '¶',   -- Show end-of-line as pilcrow
-  -- Other options: extends='>', precedes='<', nbsp='␣'
+  -- Other options:
+  extends='>', precedes='<', nbsp='␣'
 }
 
 o.expandtab = false

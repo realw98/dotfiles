@@ -14,8 +14,6 @@ mkdir -p ~/.tmux/plugins
 git clone --depth=1 https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 cd ~
-mkdir -p ~/.config/nvim
-git clone --depth=1 https://github.com/NvChad/starter ~/.config/nvim
 
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/dotfiles/.zshenv ~/.zshenv
@@ -23,6 +21,7 @@ ln -s ~/dotfiles/.vimrc ~/.vimrc
 
 mkdir -p ~/.config/tmux
 ln -s ~/dotfiles/.tmux.conf ~/.config/tmux/tmux.conf
+ln -s ~/dotfiles/nvim ~/.config/nvim
 
 cp ~/dotfiles/.aliases ~/.aliases
 
