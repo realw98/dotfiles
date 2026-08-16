@@ -4,3 +4,4 @@ dbus-update-activation-environment --systemd QT_QPA_PLATFORM QT_QPA_PLATFORMTHEM
 xrdb -merge ~/.Xresources
 xxkb &
 csd-xsettings &
+/usr/lib/pam_kwallet_init &
