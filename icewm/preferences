@@ -494,7 +494,7 @@
 # KeyWinTileTopRight=""
 
 #  Add a keyboard layout.
-# KeyboardLayouts=""
+ KeyboardLayouts="us, ru"
 
 #  Let the Dock layer limit the workspace (incompatible with GNOME Panel)
 # LimitByDockLayer=0 # 0/1
