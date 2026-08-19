@@ -62,5 +62,5 @@ inc_file() {
 source $ZSH/oh-my-zsh.sh
 
 inc_file ~/dotfiles/.aliases
-
+inc_file ~/.aliases
 
