@@ -39,18 +39,20 @@ else
 	fi
 fi
 
+inc_file() {
+	[ -s "$1" ] && source "$1"
+}
 
 if ! shopt -oq posix; then
-  if [ -f /usr/local/share/bash-completion/bash_completion.sh ]; then
-    . /usr/local/share/bash-completion/bash_completion.sh
-  fi
+	inc_file /usr/local/share/bash-completion/bash_completion.sh
 fi
 
-source ~/.aliases
-source ~/dotfiles/.env
-[ -s ~/.env ] && source ~/.env
+inc_file ~/dotfiles/.env
+inc_file ~/.env
+inc_file ~/.aliases
 
-#export NVM_DIR="$HOME/.nvm"
-#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# export NVM_DIR="$HOME/.nvm"
+# inc_file "$NVM_DIR/nvm.sh"
+# inc_file "$NVM_DIR/bash_completion"
+# inc_file "$HOME/.cargo/env"
 

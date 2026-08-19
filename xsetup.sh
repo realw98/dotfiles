@@ -1,11 +1,10 @@
-#!/usr/local/bin/bash
+#!/usr/bin/env sh
 
-
-cd $HOME
 
 ln -s ~/dotfiles/.Xresources ~/.Xresources
-ln -si ~/dotfiles/hypr ~/.config/hypr
-ln -si ~/dotfiles/dunst ~/.config/dunst
-ln -si ~/dotfiles/waybar ~/.config/waybar
-ln -si ~/dotfiles/mako ~/.config/mako
+
+mkdir -p ~/.config/icewm
+ln -s ~/dotfiles/icewm/keys ~/.config/icewm/keys
+ln -s ~/dotfiles/icewm/preferences ~/.config/icewm/preferences
+ln -s ~/dotfiles/icewm/startup ~/.config/icewm/startup
 
