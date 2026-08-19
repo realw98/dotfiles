@@ -3,5 +3,4 @@
 dbus-update-activation-environment --systemd QT_QPA_PLATFORM QT_QPA_PLATFORMTHEME
 xrdb -merge ~/.Xresources
 xxkb &
-csd-xsettings &
-/usr/lib/pam_kwallet_init &
+source $HOME/.config/icewm/startup.local

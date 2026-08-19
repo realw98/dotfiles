@@ -47,12 +47,12 @@ if ! shopt -oq posix; then
 	inc_file /usr/share/bash-completion/bash_completion || inc_file /etc/bash_completion
 fi
 
-inc_file ~/.aliases
 inc_file ~/dotfiles/.env
 inc_file ~/.env
+inc_file ~/.aliases
 
 export NVM_DIR="$HOME/.nvm"
-inc_file "$NVM_DIR/nvm.sh"  # This loads nvm
-inc_file "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+inc_file "$NVM_DIR/nvm.sh"
+inc_file "$NVM_DIR/bash_completion"
 inc_file "$HOME/.cargo/env"
 

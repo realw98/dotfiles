@@ -542,7 +542,7 @@
 # MenuMaximalWidth=0 # [0-16384]
 
 #  Menus track mouse even with no mouse buttons held.
-# MenuMouseTracking=0 # 0/1
+ MenuMouseTracking=1 # 0/1
 
 #  Place new mini-icons from bottom to top.
 # MiniIconsBottomToTop=0 # 0/1

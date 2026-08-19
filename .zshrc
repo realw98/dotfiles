@@ -55,13 +55,8 @@ plugins=(catimg tldr zsh-navigation-tools)
 # User configuration
 #
 
-inc_file() {
-	[ -s $1 ] && source $1
-}
-
 inc_file ~/.zshrc.local
-
-source $ZSH/oh-my-zsh.sh
+inc_file $ZSH/oh-my-zsh.sh
 
 inc_file /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 inc_file /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highligting.zsh
