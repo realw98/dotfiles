@@ -18,10 +18,10 @@ shopt -s cmdhist
 shopt -s histappend histreedit histverify
 shopt -s extglob
 
-export HISTCONTROL=ignoredups
+export HISTCONTROL=ignoreboth
 
 case "$TERM" in
-    xterm-color|*-256color) color_prompt=yes;;
+	xterm-color|*-256color) color_prompt=yes;;
 esac
 
 
