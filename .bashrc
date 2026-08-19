@@ -25,12 +25,12 @@ case "$TERM" in
 esac
 
 inc_file() {
-  [ -s $1 ] && source $1
+  [ -s "$1" ] && source "$1"
 }
 
 source ~/dotfiles/.aliases
-source ~/dotfiles/.env
 inc_file ~/.aliases
+source ~/dotfiles/.env
 inc_file ~/.env
 
 if [ "$color_prompt" = "yes" ]; then

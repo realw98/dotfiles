@@ -55,10 +55,6 @@ plugins=(colored-man-pages tmux zsh-navigation-tools)
 # User configuration
 #
 
-inc_file() {
-	[ -s $1 ] && source $1
-}
-
 source $ZSH/oh-my-zsh.sh
 
 inc_file ~/dotfiles/.aliases

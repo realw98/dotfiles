@@ -6,5 +6,5 @@ if [[ -f ~/.bashrc ]] ; then
 	. ~/.bashrc
 fi
 
-[ -x ~/dotfiles/welcome.sh ] && ~/dotfiles/welcome.sh
+inc_file ~/dotfiles/welcome.sh
 
