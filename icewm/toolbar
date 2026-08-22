@@ -1,0 +1,13 @@
+# This is an example for icewm 3.6.0 toolbar definition file.
+# It will be installed as /usr/share/icewm/toolbar.
+# Place your variants in /etc/icewm or in $HOME/.icewm since
+# modifications to this file will be overwritten when you reinstall icewm.
+#
+
+prog "URxvtc" utilities-terminal urxvtc
+prog "Sakura" xterm sakura
+prog "Web browser" vivaldi WWWBrowser
+prog "Volume control" audio-speakers SndVol
+prog "File Manager" folder FileManager
+prog "Far" far2l far2l
+prog "Strawberry" strawberry strawberry

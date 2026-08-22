@@ -4,7 +4,7 @@ XTerm*termName:             xterm-256color
 XTerm*visualBell: true
 
 ! Create the window with the specified X window geometry [default 80x24]
-URxvt*geometry:                         80x30
+URxvt*geometry:                         90x25
 
 ! True: start as a login shell by prepending a - to argv[0] of the shell; option -ls.  False: start as a normal sub-shell [default]; 
 URxvt*loginShell:                       false

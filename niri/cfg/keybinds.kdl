@@ -42,7 +42,7 @@ binds {
 		ALT+CTRL+Period		{ spawn-sh "strawberry --volume-up"; }
 
 		ALT+CTRL+Down		{ spawn-sh "strawberry --next"; }
-		ALT+CTRL+Up		{ spawn-sh "strawberry --previous"; }
+		ALT+CTRL+Up			{ spawn-sh "strawberry --previous"; }
 		ALT+CTRL+Left		{ spawn-sh "strawberry --seek-by -5"; }
 		ALT+CTRL+Right		{ spawn-sh "strawberry --seek-by 5"; }
 

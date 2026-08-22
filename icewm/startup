@@ -3,4 +3,7 @@
 dbus-update-activation-environment --systemd QT_QPA_PLATFORM QT_QPA_PLATFORMTHEME
 xrdb -merge ~/.Xresources
 xxkb &
+openrgb --profile "my" &
+urxvtd &
+dunst &
 source $HOME/.config/icewm/startup.local

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+wpctl $1 @DEFAULT_AUDIO_SINK@ $2
+cur_vol=$(wpctl get-volume @DEFAULT_AUDIO_SINK@)
+notify-send -u low -h string:x-canonical-private-synchronous:volume 'Volume' "$cur_vol"

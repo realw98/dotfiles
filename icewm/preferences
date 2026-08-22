@@ -68,7 +68,7 @@
 # CPUStatusCombine=1 # 0/1
 
 #  Command to run on CPU status.
- CPUStatusCommand="urxvt -T 'Process Status' -e htop"
+ CPUStatusCommand="xterm -T 'Process Status' -e htop"
 
 #  Show ACPI temperature in CPU status tool tip.
 # CPUStatusShowAcpiTemp=1 # 0/1
@@ -425,7 +425,7 @@
 # KeyWinLower="Alt+F3"
 
 #  Maximizes the active window with borders.
-# KeyWinMaximize="Alt+F10"
+ KeyWinMaximize="Super+Up"
 
 #  Maximizes the active window horizontally.
 # KeyWinMaximizeHoriz=""
@@ -494,7 +494,7 @@
 # KeyWinTileTopRight=""
 
 #  Add a keyboard layout.
- KeyboardLayouts="us, ru"
+# KeyboardLayouts="us, ru"
 
 #  Let the Dock layer limit the workspace (incompatible with GNOME Panel)
 # LimitByDockLayer=0 # 0/1
@@ -758,7 +758,7 @@
 # ShowProgramsMenu=1 # 0/1
 
 #  Show the run menu item in the program menu.
-# ShowRun=1 # 0/1
+ ShowRun=1 # 0/1
 
 #  Show settings submenu in the program menu.
 # ShowSettingsMenu=1 # 0/1
@@ -803,7 +803,7 @@
 # TaskBarApmGraphWidth=10 # [1-1000]
 
 #  Task bar at top of the screen.
-# TaskBarAtTop=0 # 0/1
+ TaskBarAtTop=1 # 0/1
 
 #  Auto hide task bar after delay.
 # TaskBarAutoHide=0 # 0/1
@@ -875,10 +875,10 @@
 # TaskBarShowCollapseButton=0 # 0/1
 
 #  Show memory usage status on task bar (Linux only)
-# TaskBarShowMEMStatus=1 # 0/1
+ TaskBarShowMEMStatus=0 # 0/1
 
 #  Show mailbox status on task bar.
-# TaskBarShowMailboxStatus=1 # 0/1
+ TaskBarShowMailboxStatus=0 # 0/1
 
 #  Show network status on task bar.
 # TaskBarShowNetStatus=1 # 0/1
@@ -899,7 +899,7 @@
 # TaskBarShowWindowIcons=1 # 0/1
 
 #  Show 'window list' menu on task bar.
-# TaskBarShowWindowListMenu=1 # 0/1
+ TaskBarShowWindowListMenu=0 # 0/1
 
 #  Show titles of windows on task buttons of the task bar.
 # TaskBarShowWindowTitles=1 # 0/1
@@ -911,7 +911,7 @@
 # TaskBarShowWorkspaces=1 # 0/1
 
 #  Group applications with the same class name under a single task button: 0=off, 1=digits, 2=dots, 3=both.
-# TaskBarTaskGrouping=0 # [0-3]
+ TaskBarTaskGrouping=3 # [0-3]
 
 #  Enable mouse wheel cycling over workspaces and task buttons in taskbar.
 # TaskBarUseMouseWheel=1 # 0/1
@@ -920,7 +920,7 @@
 # TaskBarWidthPercentage=100 # [0-100]
 
 #  Place workspace pager on left, not right.
-# TaskBarWorkspacesLeft=1 # 0/1
+ TaskBarWorkspacesLeft=0 # 0/1
 
 #  Limit number of taskbar workspaces.
 # TaskBarWorkspacesLimit=""
@@ -974,7 +974,7 @@
 # WinMenuItems="rmsnxfhualytiecw"
 
 #  Add a workspace.
-WorkspaceNames=" 1 ", " 2 ", " 3 ", " 4 "
+WorkspaceNames=" 1 ", " 2 "
 
 #  Time before workspace status window is hidden in ms.
 # WorkspaceStatusTime=700 # [0-2500]
@@ -1478,7 +1478,7 @@ WorkspaceNames=" 1 ", " 2 ", " 3 ", " 4 "
 #
 
 #  Seconds between cycling over all background images, default zero is off.
- CycleBackgroundsPeriod=1000 # [0-2147483647]
+# CycleBackgroundsPeriod=1000 # [0-2147483647]
 
 #  Display desktop background centered and not tiled.
  DesktopBackgroundCenter=1 # 0/1
