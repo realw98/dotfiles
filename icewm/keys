@@ -8,24 +8,30 @@
 # Omit the XK_ prefixs and replace XF86XK_ prefixes by XF86.
 # Valid modifiers are Alt, AltGr, Ctrl, Shift, Meta, Super and Hyper.
 #
-key "Super+a"            xterm
-key "Super+i"            vivaldi
-key "Super+e"            /bin/sh -c "dolphin || thunar || nemo"
+key "Super+a"		urxvtc
+key "Ctrl+Super+a"	sakura
+key "Super+i"		WWWBrowser
+key "Super+e"		FileManager
+key "Super+s"		SndVol
 
-key "Super+KP_Subtract"     amixer sset Master 5%-
-key "Super+KP_Add"          amixer sset Master 5%+
+key "Ctrl+Super+Down"	icevolume set-volume 2%-
+key "Ctrl+Super+Up"		icevolume set-volume 2%+
 
-# "Multimedia key" bindings for Xorg. Gather the keycodes of your
-# advanced function keys by watching the output of the xev command
-# whilst pressing those keys and map those symbols using xmodmap.
-# Note that some of these may interfere with other listeners,
-# like systemd for the suspend key events.
-#
-# key "XF86Standby"         /bin/sh -c "{ test -e /run/systemd/system && systemctl suspend; } ||:"
-# key "XF86Sleep"           /bin/sh -c "{ test -e /run/systemd/system && systemctl suspend; } ||:"
-key "XF86AudioLowerVolume"  amixer sset Master 5%-
-key "XF86AudioRaiseVolume"  amixer sset Master 5%+
-key "XF86AudioMute"         amixer sset Master toggle
-key "XF86Calculator"        /bin/sh -c "gnome-calculator || xcalc || ( type bc >/dev/null 2>&1 && x-terminal-emulator -e bc -l)"
+key "XF86AudioLowerVolume"	icevolume set-volume 2%-
+key "XF86AudioRaiseVolume"	icevolume set-volume 2%+
+key "XF86AudioMute"			icevolume set-mute toggle
+
+key "XF86AudioPlay"		playerctl play
+key "XF86AudioPause"	playerctl play-pause
+key "XF86AudioStop"		playerctl stop
+key "XF86AudioNext"		playerctl next
+key "XF86AudioPrev"		playerctl previous
+
+key "Alt+Ctrl+,"		playerctl volume 0.1-
+key "Alt+Ctrl+."		playerctl volume 0.1+
+key "Alt+Ctrl+Down"		playerctl next
+key "Alt+Ctrl+Up"		playerctl previous
+key "Alt+Ctrl+Left"		playerctl position 5-
+key "Alt+Ctrl+Right"	playerctl position 5+
 
 switchkey "Super+p"         icewm-menu-xrandr

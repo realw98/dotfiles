@@ -57,13 +57,14 @@ plugins=(zsh-navigation-tools)
 source $ZSH/oh-my-zsh.sh
 
 inc_file() {
-    [-s $1] && source $1
+    [ -s "$1" ] && source $1
 }
 
 inc_file ~/.zshrc.local
 
-inc_file /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-inc_file /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highligting.zsh
+inc_file /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+inc_file /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+inc_file /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 export ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets cursor root)
 
 inc_file ~/.aliases

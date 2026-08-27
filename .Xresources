@@ -1,18 +1,19 @@
 ! Specifies the terminal type name to be set in the TERM environment variable
 URxvt*termName:             rxvt-unicode-256color
 XTerm*termName:             xterm-256color
+XTerm*visualBell: true
 
 ! Create the window with the specified X window geometry [default 80x24]
-URxvt*geometry:                         80x30
+URxvt*geometry:                         90x25
 
 ! True: start as a login shell by prepending a - to argv[0] of the shell; option -ls.  False: start as a normal sub-shell [default]; 
 URxvt*loginShell:                       false
 
 ! Use the specified colour for the scrollbar [default #B2B2B2]
-URxvt*scrollColor:                      #777777
+URxvt*scrollColor:                      #444444
 
 ! Set scrollbar style to rxvt, plain, next or xterm. plain is the authors favourite.
-URxvt*scrollstyle:                      plain
+URxvt*scrollstyle:                      xterm
 
 ! True: scroll to bottom when a non-special key pressed.  Special keys are those which are intercepted by rxvt for special handling andnt passed onto the shell; False: dont scroll to bottom
 URxvt*scrollTtyKeypress:                true
@@ -38,9 +39,11 @@ URxvt*skipScroll:                       true
 
 ! True: enable the scrollbar [default]; option -sb. False: disable the scrollbar
 URxvt*scrollBar:                        true
+XTerm*scrollBar:                        true
 
 ! place the scrollbar on the right of the window
 URxvt*scrollBar_right:                  true
+XTerm*rightScrollBar:                   true
 
 ! di5play an rxvt scrollbar with/without a trough
 URxvt*scrollBar_floating:               false
@@ -92,10 +95,12 @@ URxvt*mouseWheelScrollPage:             false
 ! URxvt*insecure:                       boolean
 
 ! Use the specified colour as the windows background colour [default White]
-URxvt*background:                       #23252e
+URxvt*background: #1e2030
+XTerm*background: #1e2030
 
 !  Use the specified colour as the windows foreground colour [default Black]
-URxvt*foreground:                       White
+URxvt*foreground: White
+XTerm*foreground: White
 
 ! Use the specified colour to disp1ay bold characters when the foreground colour is the default.
 ! URxvt*colorBD:                        color
@@ -132,9 +137,10 @@ URxvt*cursorBlink:                      false
 
 ! Use the specified colour for the cursor.  The default is to use the foreground colour
 URxvt*cursorColor:                      Green
+XTerm*cursorColor:                      Green
 
 ! Use the specified colour for the colour of the cursor text.  For this to take effect, cursorColor must also be specified.  The default is to use the background colour
-URxvt*cursorColor2:                     Blue
+ URxvt*cursorColor2:                     Blue
 
 ! True: blank the pointer when a key is pressed or after a set number of seconds of inactivity. False: the pointer is always visible [default]
 !URxvt*pointerBlank:                     true
@@ -318,3 +324,5 @@ URxvt*url-launcher:                   /usr/bin/xdg-open
 
 
 URxvt.iso14755_52: false
+
+
