@@ -1,6 +1,9 @@
 // ────────────── Startup Applications ──────────────
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Miscellaneous#spawn-sh-at-startup
 
-    spawn-sh-at-startup "qs -c noctalia-shell"
-    spawn-sh-at-startup "dbus-update-activation-environment --systemd QT_QPA_PLATFORM QT_QPA_PLATFORMTHEME"
+spawn-at-startup "openrgb" "--profile" "my"
+spawn-at-startup "qs" "-c" "noctalia-shell"
+spawn-sh-at-startup "dbus-update-activation-environment --systemd QT_QPA_PLATFORM QT_QPA_PLATFORMTHEME"
+spawn-at-startup "/usr/lib/pam_kwallet_init"
+spawn-at-startup "kwalletd6"
 
