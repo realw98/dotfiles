@@ -71,6 +71,5 @@ export ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets cursor root)
 inc_file ~/.aliases
 
 export NVM_DIR="$HOME/.nvm"
-inc_file "$NVM_DIR/nvm.sh"
-inc_file "$NVM_DIR/bash_completion"
+inc_file "/usr/share/nvm/init-nvm.sh"
 
